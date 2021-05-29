@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19H1217" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="RepositryCoreData">
+    <entity name="RepositryCoreData" representedClassName="RepositryCoreData" syncable="YES" codeGenerationType="class">
+        <attribute name="creationDate" optional="YES" attributeType="String"/>
+        <attribute name="descriptionOfRepositry" optional="YES" attributeType="String"/>
+        <attribute name="forksCount" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="language" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="repoURL" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="RepositryCoreData" positionX="-63" positionY="-18" width="128" height="148"/>
+    </elements>
+</model>
