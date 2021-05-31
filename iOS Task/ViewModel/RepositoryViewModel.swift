@@ -21,7 +21,7 @@ class RepositoryViewModel {
     }
     
     func getData() {
-        if let repoList = CoreDataManger.shared.getRepos(), !repos.isEmpty{
+        if let repoList = CoreDataManger.shared.getRepos(), !repoList.isEmpty{
             self.repos = repoList
             self.repositoryModelSubject.onNext(Array(self.repos.prefix(self.pageSize)))
         }
@@ -34,17 +34,19 @@ class RepositoryViewModel {
                     self?.repos = data
                     //                let self?.repos.
                     self?.repositoryModelSubject.onNext(Array(self!.repos.prefix(self!.pageSize)))
-                                    CoreDataManger.shared.removeAllItems()
-                                    CoreDataManger.shared.addRepo(repos: data)
+                    CoreDataManger.shared.removeAllItems()
+                    CoreDataManger.shared.addRepo(repos: data)
+                    
+                    //                if let repo = CoreDataManger.shared.getRepos{
+                    //                    self?.repositoryModelSubject.onNext(Array(self!.repos.prefix(self!.pageSize)))
+                    //                }
                 }
             }
         }
-    
-    
     }
     
     func loadMore() {
-       print(lastIndex)
+        print(lastIndex)
         if self.repos.count > lastIndex + pageSize{
             repositoryModelSubject.onNext(Array(repos[lastIndex + 1 ... lastIndex + pageSize ]))
             lastIndex = lastIndex + pageSize
@@ -54,7 +56,5 @@ class RepositoryViewModel {
             repositoryModelSubject.onCompleted()
             repositoryModelSubject.dispose()
         }
-
-      
     }
 }
