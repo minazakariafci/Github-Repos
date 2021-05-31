@@ -47,7 +47,7 @@ class CoreDataManger{
     }
     
     //MARK:- Add Repo
-    func addRepo(repos: [GitHupModel]){
+    func addRepo(repos: [RepositoryModel]){
         for repo in repos{
             let repoCD: RepositryCoreData! = NSEntityDescription.insertNewObject(forEntityName: "RepositryCoreData", into: context) as? RepositryCoreData
             if let repoName = repo.name{
@@ -82,12 +82,12 @@ class CoreDataManger{
     }
     
     //    //MARK:- Get Repos
-    func getRepos()->([GitHupModel]?){
+    func getRepos()->([RepositoryModel]?){
         do{
             if let reposCD = try context.fetch(RepositryCoreData.fetchRequest()) as? [RepositryCoreData]{
-                var repos: [GitHupModel] = []
+                var repos: [RepositoryModel] = []
                 for repo in reposCD{
-                    let repo = GitHupModel(name: repo.name, owner: Owner(avatarUrl: repo.image), description: repo.descriptionOfRepositry, createdAt: repo.creationDate, language: repo.language, forksCount: Int(repo.forksCount),htmlURL: repo.repoURL)
+                    let repo = RepositoryModel(name: repo.name, owner: Owner(avatarUrl: repo.image), description: repo.descriptionOfRepositry, createdAt: repo.creationDate, language: repo.language, forksCount: Int(repo.forksCount),htmlURL: repo.repoURL)
                     repos.append(repo)
                 }
                 return (repos)

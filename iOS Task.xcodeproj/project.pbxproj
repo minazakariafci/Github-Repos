@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		0406D6872661377B001392CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6862661377B001392CA /* AppDelegate.swift */; };
 		0406D6892661377B001392CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6882661377B001392CA /* SceneDelegate.swift */; };
-		0406D68B2661377B001392CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D68A2661377B001392CA /* ViewController.swift */; };
+		0406D68B2661377B001392CA /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D68A2661377B001392CA /* RepositoryViewController.swift */; };
 		0406D68E2661377B001392CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0406D68C2661377B001392CA /* Main.storyboard */; };
 		0406D6912661377B001392CA /* iOS_Task.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0406D68F2661377B001392CA /* iOS_Task.xcdatamodeld */; };
 		0406D6932661377C001392CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0406D6922661377C001392CA /* Assets.xcassets */; };
 		0406D6962661377C001392CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0406D6942661377C001392CA /* LaunchScreen.storyboard */; };
 		0406D6A12661377C001392CA /* iOS_TaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6A02661377C001392CA /* iOS_TaskTests.swift */; };
 		0406D6AC2661377C001392CA /* iOS_TaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6AB2661377C001392CA /* iOS_TaskUITests.swift */; };
-		0406D6C026614E94001392CA /* githubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6BF26614E94001392CA /* githubModel.swift */; };
-		0406D6D926615134001392CA /* GitHupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6D726615134001392CA /* GitHupTableViewCell.swift */; };
-		0406D6DA26615134001392CA /* GitHupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0406D6D826615134001392CA /* GitHupTableViewCell.xib */; };
+		0406D6C026614E94001392CA /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6BF26614E94001392CA /* RepositoryModel.swift */; };
+		0406D6D926615134001392CA /* RepositoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6D726615134001392CA /* RepositoryTableViewCell.swift */; };
+		0406D6DA26615134001392CA /* RepositoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0406D6D826615134001392CA /* RepositoryTableViewCell.xib */; };
 		0406D6E026615853001392CA /* APIServices .swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6DF26615853001392CA /* APIServices .swift */; };
-		0406D6E8266159A0001392CA /* GithupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6E7266159A0001392CA /* GithupViewModel.swift */; };
+		0406D6E8266159A0001392CA /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6E7266159A0001392CA /* RepositoryViewModel.swift */; };
 		0406D6ED26615D60001392CA /* BaseErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6EC26615D60001392CA /* BaseErrorModel.swift */; };
 		044FD9442662B3F50010DCD5 /* Extensions+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FD9432662B3F50010DCD5 /* Extensions+UITableView.swift */; };
 		044FD9582662B8460010DCD5 /* CoreDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FD9572662B8460010DCD5 /* CoreDataManger.swift */; };
@@ -50,7 +50,7 @@
 		0406D6832661377B001392CA /* iOS Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Task.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0406D6862661377B001392CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0406D6882661377B001392CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0406D68A2661377B001392CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0406D68A2661377B001392CA /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
 		0406D68D2661377B001392CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0406D6902661377B001392CA /* iOS_Task.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOS_Task.xcdatamodel; sourceTree = "<group>"; };
 		0406D6922661377C001392CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,11 +62,11 @@
 		0406D6A72661377C001392CA /* iOS TaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS TaskUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0406D6AB2661377C001392CA /* iOS_TaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_TaskUITests.swift; sourceTree = "<group>"; };
 		0406D6AD2661377C001392CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0406D6BF26614E94001392CA /* githubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = githubModel.swift; sourceTree = "<group>"; };
-		0406D6D726615134001392CA /* GitHupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHupTableViewCell.swift; sourceTree = "<group>"; };
-		0406D6D826615134001392CA /* GitHupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GitHupTableViewCell.xib; sourceTree = "<group>"; };
+		0406D6BF26614E94001392CA /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		0406D6D726615134001392CA /* RepositoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTableViewCell.swift; sourceTree = "<group>"; };
+		0406D6D826615134001392CA /* RepositoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryTableViewCell.xib; sourceTree = "<group>"; };
 		0406D6DF26615853001392CA /* APIServices .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIServices .swift"; sourceTree = "<group>"; };
-		0406D6E7266159A0001392CA /* GithupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithupViewModel.swift; sourceTree = "<group>"; };
+		0406D6E7266159A0001392CA /* RepositoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
 		0406D6EC26615D60001392CA /* BaseErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseErrorModel.swift; sourceTree = "<group>"; };
 		044FD9432662B3F50010DCD5 /* Extensions+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UITableView.swift"; sourceTree = "<group>"; };
 		044FD9572662B8460010DCD5 /* CoreDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManger.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		0406D6BC26614DE4001392CA /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0406D6BF26614E94001392CA /* githubModel.swift */,
+				0406D6BF26614E94001392CA /* RepositoryModel.swift */,
 				0406D6EC26615D60001392CA /* BaseErrorModel.swift */,
 			);
 			path = Model;
@@ -180,10 +180,10 @@
 		0406D6BD26614DF1001392CA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0406D68A2661377B001392CA /* ViewController.swift */,
+				0406D68A2661377B001392CA /* RepositoryViewController.swift */,
 				0406D68C2661377B001392CA /* Main.storyboard */,
-				0406D6D726615134001392CA /* GitHupTableViewCell.swift */,
-				0406D6D826615134001392CA /* GitHupTableViewCell.xib */,
+				0406D6D726615134001392CA /* RepositoryTableViewCell.swift */,
+				0406D6D826615134001392CA /* RepositoryTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -191,7 +191,7 @@
 		0406D6BE26614DF9001392CA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				0406D6E7266159A0001392CA /* GithupViewModel.swift */,
+				0406D6E7266159A0001392CA /* RepositoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -351,7 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0406D6DA26615134001392CA /* GitHupTableViewCell.xib in Resources */,
+				0406D6DA26615134001392CA /* RepositoryTableViewCell.xib in Resources */,
 				0406D6962661377C001392CA /* LaunchScreen.storyboard in Resources */,
 				0406D6932661377C001392CA /* Assets.xcassets in Resources */,
 				0406D68E2661377B001392CA /* Main.storyboard in Resources */,
@@ -483,14 +483,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				044FD9582662B8460010DCD5 /* CoreDataManger.swift in Sources */,
-				0406D6D926615134001392CA /* GitHupTableViewCell.swift in Sources */,
-				0406D68B2661377B001392CA /* ViewController.swift in Sources */,
+				0406D6D926615134001392CA /* RepositoryTableViewCell.swift in Sources */,
+				0406D68B2661377B001392CA /* RepositoryViewController.swift in Sources */,
 				0406D6ED26615D60001392CA /* BaseErrorModel.swift in Sources */,
 				044FD9442662B3F50010DCD5 /* Extensions+UITableView.swift in Sources */,
 				0406D6E026615853001392CA /* APIServices .swift in Sources */,
-				0406D6C026614E94001392CA /* githubModel.swift in Sources */,
+				0406D6C026614E94001392CA /* RepositoryModel.swift in Sources */,
 				0406D6872661377B001392CA /* AppDelegate.swift in Sources */,
-				0406D6E8266159A0001392CA /* GithupViewModel.swift in Sources */,
+				0406D6E8266159A0001392CA /* RepositoryViewModel.swift in Sources */,
 				0406D6912661377B001392CA /* iOS_Task.xcdatamodeld in Sources */,
 				0406D6892661377B001392CA /* SceneDelegate.swift in Sources */,
 			);

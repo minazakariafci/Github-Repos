@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class GitHupTableViewCell: UITableViewCell {
+class RepositoryTableViewCell: UITableViewCell {
     
     @IBOutlet weak var githupImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -23,7 +23,7 @@ class GitHupTableViewCell: UITableViewCell {
     }
     
     // SetData
-    func setData(repos: GitHupModel){
+    func setData(repos: RepositoryModel){
         titleLabel.text = repos.name
         descriptionLabel.text = repos.description
         forksCountLabel.text = String(repos.forksCount ?? 0)

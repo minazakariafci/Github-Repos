@@ -23,20 +23,16 @@ class RepositoryViewController: UIViewController {
         self.subscribeToResponse()
         self.getData()
     }
-    
     func setupTableView() {
         repositoryTableView.registerNib(cell: RepositoryTableViewCell.self)
     }
-    
     func getData()  {
         viewModel.getData()
     }
-    
-    
     func subscribeToResponse() {
         self.viewModel.repositoryModelObservable
             .subscribe(onNext: {
-              self.repos.append(contentsOf: $0)
+                self.repos.append(contentsOf: $0)
                 self.repositoryTableView.reloadData()
             })
             
@@ -64,11 +60,8 @@ extension RepositoryViewController : UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell  = repositoryTableView.dequeueReusableCell(withIdentifier: "GitHupTableViewCell" , for: indexPath) as! RepositoryTableViewCell
+        let cell  = repositoryTableView.dequeueReusableCell(withIdentifier: "RepositoryTableViewCell" , for: indexPath) as! RepositoryTableViewCell
         cell.setData(repos: repos[indexPath.row])
         return cell
     }
-    
-   
-    
 }

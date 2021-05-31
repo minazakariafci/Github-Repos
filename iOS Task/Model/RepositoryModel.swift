@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GitHupModel : Codable {
+struct RepositoryModel : Codable {
     var id : Int?
     var name : String?
     var owner : Owner?
