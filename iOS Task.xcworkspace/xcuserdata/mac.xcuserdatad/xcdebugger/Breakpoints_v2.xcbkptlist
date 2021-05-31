@@ -7,17 +7,65 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5ACA7074-8B1D-4EC3-9FE6-8CDF539CF65D"
+            uuid = "DD6BCF18-B42A-4A41-8238-41E79E0C643E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "iOS Task/View/ViewController.swift"
+            filePath = "iOS Task/ViewModel/GithupViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "subscribeToBranchSelection()"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "getData()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB58B7DB-9985-4A5C-A75C-25F1060989D0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOS Task/ViewModel/GithupViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "getData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AB58B7DB-9985-4A5C-A75C-25F1060989D0 - 7eb9cd192d549514"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOS_Task.GithupViewModel.getData() -&gt; ()"
+                  moduleName = "iOS Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/iOS%20Task/iOS%20Task/ViewModel/GithupViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "852">
+               </Location>
+               <Location
+                  uuid = "AB58B7DB-9985-4A5C-A75C-25F1060989D0 - 62b0e66a35a6049"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Array&lt;iOS_Task.GitHupModel&gt;&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOS_Task.GithupViewModel.getData() -&gt; ()"
+                  moduleName = "iOS Task"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Desktop/IOS/iOS%20Task/iOS%20Task/ViewModel/GithupViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "203">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -15,12 +15,12 @@ class ViewController: UIViewController {
     
     let githupView = GithupViewModel()
     let disposeBag = DisposeBag()
+    var repos = [GitHupModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
         self.subscribeToResponse()
-        self.subscribeToBranchSelection()
         self.getData()
     }
     
@@ -32,27 +32,43 @@ class ViewController: UIViewController {
         githupView.getData()
     }
     
-    // Set
+    
     func subscribeToResponse() {
         self.githupView.githupModelObservable
-            .bind(to: self.githupTableView
-                    .rx
-                    .items(cellIdentifier: String(describing: GitHupTableViewCell.self),
-                           cellType: GitHupTableViewCell.self)) { row, repos, cell in
-                cell.setData(repos: repos)
-            }
+            .subscribe(onNext: {
+              self.repos.append(contentsOf: $0)
+                self.githupTableView.reloadData()
+            })
+            
             .disposed(by: disposeBag)
     }
     
-    func subscribeToBranchSelection() {
-        Observable
-            .zip(githupTableView.rx.itemSelected, githupTableView.rx.modelSelected(GitHupModel.self))
-            .bind {selectedIndex, repo in
-                if let url = URL(string: repo.htmlURL ?? "") {
-                    UIApplication.shared.open(url)
-                }
-            }
-            .disposed(by: disposeBag)
+}
+
+extension ViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == (repos.count - 1) && repos.count < githupView.repos.count {
+            githupView.loadMore()
+        }
     }
 }
 
+extension ViewController : UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return repos.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell  = githupTableView.dequeueReusableCell(withIdentifier: "GitHupTableViewCell" , for: indexPath) as! GitHupTableViewCell
+        cell.setData(repos: repos[indexPath.row])
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let url = URL(string: repos[indexPath.row].htmlURL ?? "") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+}
