@@ -81,9 +81,9 @@
                 <outlet property="creationDateLabel" destination="5pm-ek-1GZ" id="tiw-Lo-Yx2"/>
                 <outlet property="descriptionLabel" destination="3d0-dg-Qjl" id="A7g-tJ-0hV"/>
                 <outlet property="forksCountLabel" destination="iDD-Of-JfH" id="0ri-LZ-nz5"/>
-                <outlet property="githupImageView" destination="c9M-a4-ADx" id="0bd-eJ-Vqp"/>
                 <outlet property="languageLabel" destination="Uah-mO-n0T" id="juH-EB-dai"/>
                 <outlet property="titleLabel" destination="oo8-YD-EUH" id="ewZ-dV-5YE"/>
+                <outlet property="userImageView" destination="c9M-a4-ADx" id="0bd-eJ-Vqp"/>
             </connections>
             <point key="canvasLocation" x="-23.188405797101453" y="124.88839285714285"/>
         </tableViewCell>

@@ -1,5 +1,5 @@
 //
-//  githupTableViewCell.swift
+//  RepositoryTableViewCell.swift
 //  iOS Task
 //
 //  Created by mac on 5/28/21.
@@ -10,7 +10,7 @@ import Kingfisher
 
 class RepositoryTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var githupImageView: UIImageView!
+    @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var forksCountLabel: UILabel!
@@ -30,7 +30,7 @@ class RepositoryTableViewCell: UITableViewCell {
         languageLabel.text = repos.language
         creationDateLabel.text = repos.createdAt
         if let urlString = repos.owner?.avatarUrl , let url = URL(string: urlString){
-            githupImageView.kf.setImage(with: url)
+            userImageView.kf.setImage(with: url)
         }
     }
 }

@@ -32,14 +32,9 @@ class RepositoryViewModel {
                 }else{
                     guard let data = data else { return  }
                     self?.repos = data
-                    //                let self?.repos.
                     self?.repositoryModelSubject.onNext(Array(self!.repos.prefix(self!.pageSize)))
                     CoreDataManger.shared.removeAllItems()
                     CoreDataManger.shared.addRepo(repos: data)
-                    
-                    //                if let repo = CoreDataManger.shared.getRepos{
-                    //                    self?.repositoryModelSubject.onNext(Array(self!.repos.prefix(self!.pageSize)))
-                    //                }
                 }
             }
         }
