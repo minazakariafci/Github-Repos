@@ -24,6 +24,7 @@
 		0406D6ED26615D60001392CA /* BaseErrorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0406D6EC26615D60001392CA /* BaseErrorModel.swift */; };
 		044FD9442662B3F50010DCD5 /* Extensions+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FD9432662B3F50010DCD5 /* Extensions+UITableView.swift */; };
 		044FD9582662B8460010DCD5 /* CoreDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044FD9572662B8460010DCD5 /* CoreDataManger.swift */; };
+		0493DB1A2666B4800030F5AB /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493DB192666B4800030F5AB /* Repository.swift */; };
 		09F2876ECAC943962E7BD25E /* Pods_iOS_Task_iOS_TaskUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F203F17BC8501EDDC27C5663 /* Pods_iOS_Task_iOS_TaskUITests.framework */; };
 		119115E157D09FAB3B99EFAE /* Pods_iOS_Task.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C7A3CB4A9A8DCC63D24763E /* Pods_iOS_Task.framework */; };
 		56C06DA6843BAC765AFE0E68 /* Pods_iOS_TaskTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA82B9756C27C8F94A10B0EA /* Pods_iOS_TaskTests.framework */; };
@@ -70,6 +71,7 @@
 		0406D6EC26615D60001392CA /* BaseErrorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseErrorModel.swift; sourceTree = "<group>"; };
 		044FD9432662B3F50010DCD5 /* Extensions+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UITableView.swift"; sourceTree = "<group>"; };
 		044FD9572662B8460010DCD5 /* CoreDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManger.swift; sourceTree = "<group>"; };
+		0493DB192666B4800030F5AB /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		106929C1643BE128DB09FD9C /* Pods-iOS TaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS TaskTests.debug.xcconfig"; path = "Target Support Files/Pods-iOS TaskTests/Pods-iOS TaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3EF90B6C6EE22102BF3EFE76 /* Pods-iOS Task-iOS TaskUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS Task-iOS TaskUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOS Task-iOS TaskUITests/Pods-iOS Task-iOS TaskUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4C7A3CB4A9A8DCC63D24763E /* Pods_iOS_Task.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Task.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 		0406D6852661377B001392CA /* iOS Task */ = {
 			isa = PBXGroup;
 			children = (
+				0493DB182666B4610030F5AB /* Repository */,
 				044FD9562662B82C0010DCD5 /* CoreData */,
 				044FD92F26627D600010DCD5 /* Utilities */,
 				0406D6DE2661582F001392CA /* NetworkLayer */,
@@ -218,6 +221,14 @@
 				044FD9572662B8460010DCD5 /* CoreDataManger.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		0493DB182666B4610030F5AB /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0493DB192666B4800030F5AB /* Repository.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		3F9B8D16E7B208512E5BCD1B /* Pods */ = {
@@ -493,6 +504,7 @@
 				0406D6E8266159A0001392CA /* RepositoryViewModel.swift in Sources */,
 				0406D6912661377B001392CA /* iOS_Task.xcdatamodeld in Sources */,
 				0406D6892661377B001392CA /* SceneDelegate.swift in Sources */,
+				0493DB1A2666B4800030F5AB /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

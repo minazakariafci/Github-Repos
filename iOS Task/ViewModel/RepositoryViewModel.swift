@@ -8,38 +8,26 @@
 import Foundation
 import RxCocoa
 import RxSwift
-import CoreData
 
 class RepositoryViewModel {
-    
+    let disposeBag = DisposeBag()
     private var lastIndex = 9
     private var pageSize = 10
     var repos = [RepositoryModel]()
+    let repository = Repository()
     private var repositoryModelSubject = PublishSubject<[RepositoryModel]>()
     var repositoryModelObservable: Observable<[RepositoryModel]> {
         return repositoryModelSubject
     }
     
-    func getData() {
-        if let repoList = CoreDataManger.shared.getRepos(), !repoList.isEmpty{
-            self.repos = repoList
-            self.repositoryModelSubject.onNext(Array(self.repos.prefix(self.pageSize)))
-        }
-        else{
-            APIClient.instance.getData(url: "https://api.github.com/users/johnsundell/repos") { [weak self] (data: [RepositoryModel]?, error) in
-                if let error = error {
-                    print(error)
-                }else{
-                    guard let data = data else { return  }
-                    self?.repos = data
-                    self?.repositoryModelSubject.onNext(Array(self!.repos.prefix(self!.pageSize)))
-                    CoreDataManger.shared.removeAllItems()
-                    CoreDataManger.shared.addRepo(repos: data)
-                }
-            }
-        }
+    func getData(){
+        repository.getData().subscribe(
+            onNext: { [weak self] repo in
+            self?.repos = repo
+            self?.repositoryModelSubject.onNext(Array(self!.repos.prefix(self!.pageSize)))
+            }).disposed(by: disposeBag)
     }
-    
+
     func loadMore() {
         print(lastIndex)
         if self.repos.count > lastIndex + pageSize{
