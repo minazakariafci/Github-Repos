@@ -38,7 +38,6 @@ class RepositoryViewController: UIViewController {
             
             .disposed(by: disposeBag)
     }
-    
 }
 
 extension RepositoryViewController : UITableViewDelegate {
@@ -58,7 +57,7 @@ extension RepositoryViewController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return repos.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = repositoryTableView.dequeueReusableCell(withIdentifier: "RepositoryTableViewCell" , for: indexPath) as! RepositoryTableViewCell
         cell.setData(repos: repos[indexPath.row])

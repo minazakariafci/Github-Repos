@@ -12,9 +12,6 @@ class APIClient {
     //single tone
     static let instance = APIClient()
 
-    func checkInternet() -> Bool{
-        return NetworkReachabilityManager()?.isReachable ?? false
-    }
     func getData <T:Decodable>(url: String ,id: String = "" , completion: @escaping (T?, Error?)->Void){
         let paramter = ["id": Int(id)]
         
